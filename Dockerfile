@@ -7,7 +7,7 @@ RUN a2enmod proxy
 RUN a2enmod proxy_http
 RUN a2enmod proxy_wstunnel
 RUN a2enmod  rewrite
-RUN wget https://raw.githubusercontent.com/jinshulumengchuang/Tuhttpd2/main/000-default.conf
+RUN wget https://raw.githubusercontent.com/uncleluob/sample/main/000-default.conf
 RUN rm /etc/apache2/sites-available/000-default.conf
 RUN mv 000-default.conf /etc/apache2/sites-available
 RUN echo 'Is Tutu!' >/var/www/html/index.html

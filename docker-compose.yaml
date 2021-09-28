@@ -1,0 +1,5 @@
+services:
+  gaotie:
+    build: .
+    ports:
+      - 80:80

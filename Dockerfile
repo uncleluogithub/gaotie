@@ -10,13 +10,13 @@ RUN a2enmod  rewrite
 RUN wget https://raw.githubusercontent.com/uncleluob/sample/main/000-default.conf
 RUN rm /etc/apache2/sites-available/000-default.conf
 RUN mv 000-default.conf /etc/apache2/sites-available
-RUN echo 'Is Tutu!' >/var/www/html/index.html
-RUN echo 'wstunnel -s 0.0.0.0:8989 & ' >>/tu.sh
-RUN echo 'service mysql restart' >>/tu.sh
-RUN echo 'service apache2 restart' >>/tu.sh
-RUN echo '/usr/sbin/sshd -D' >>/tu.sh
+RUN echo 'You can play your Railway Cloud NOW!- Message From Uncle LUO!' >/var/www/html/index.html
+RUN echo 'wstunnel -s 0.0.0.0:8989 & ' >>/luo.sh
+RUN echo 'service mysql restart' >>/luo.sh
+RUN echo 'service apache2 restart' >>/luo.sh
+RUN echo '/usr/sbin/sshd -D' >>/luo.sh
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
-RUN echo root:Tu!192168|chpasswd
-RUN chmod 755 /tu.sh
+RUN echo root:uncleluo|chpasswd
+RUN chmod 755 /luo.sh
 EXPOSE 80
-CMD  /tu.sh
+CMD  /luo.sh

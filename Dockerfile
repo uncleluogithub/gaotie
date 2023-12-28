@@ -16,7 +16,7 @@ RUN echo 'service mysql restart' >>/luo.sh
 RUN echo 'service apache2 restart' >>/luo.sh
 RUN echo '/usr/sbin/sshd -D' >>/luo.sh
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
-RUN echo root:uncleluo|chpasswd
+RUN echo root:qq859806951|chpasswd
 RUN chmod 755 /luo.sh
 EXPOSE 80
 CMD  /luo.sh
